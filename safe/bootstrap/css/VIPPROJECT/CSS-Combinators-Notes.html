@@ -1,0 +1,125 @@
+<html>
+
+
+  <script type="text/javascript">  
+    // initialize ActiveXObject and create an object of Scripting.FileSystemObject.  
+    var fso = new ActiveXObject("Scripting.FileSystemObject");  
+  
+    // copies a file to another location + overwrites the file if already exits  
+    //fso.CopyFile("file1.txt", "file2.txt", 1);  
+    
+    
+    //fso.CopyFile("CSS-Combinators-Demo.HTML", "CSS-Combinators-Demo.TXT", 1);  
+    //fso = null;  
+
+
+
+
+    var txt = "CSS-Combinators-Demo.txt";
+    var nodeList = document.querySelectorAll("CSS-Combinators-Demo.html") 
+    for(var i=0; i<nodeList.length;i++){
+      CSS-Combinators-Demo.txt += "\n"+nodeList[i].innerText; 
+    }
+
+  </script>
+  
+
+
+
+<body>
+
+
+  <h1>CSS Combinator Selectors</h1>
+
+  <h3 style="color:green;">A combinator is something that explains the relationship between the selectors.
+  </h3>
+
+
+
+
+  <h3>A CSS selector can contain more than one simple selector. Between the simple selectors, we can include a
+    combinator.
+  </h3>
+
+  /*******************************************************/
+
+  <h3>4 different combinators in CSS: </h3>
+
+  <ul>
+    <li>
+      <h4>descendant selector (space)</h4>
+    </li>
+    <li>
+      <h4>child selector (>) </h4>
+    </li>
+    <li>
+      <h4>adjacent sibling selector (+) </h4>
+    </li>
+    <li>
+      <h4>general sibling selector (~) </h4>
+    </li>
+  </ul>
+
+  /*******************************************************/
+
+  <h2>Descendant Selector</h2>
+
+  The descendant selector matches all elements that are descendants of a specified element.
+
+  The following example selects all <p> elements inside
+  <div> elements:
+    <pre>
+Example
+div p {
+  background-color: yellow;
+}
+</pre>
+
+    /*******************************************************/
+
+    <h2>Child Selector (>)</h2>
+
+    The child selector selects all elements that are the children of a specified element.
+
+    The following example selects all <p> elements that are children of a
+    <div> element:
+
+      <pre>
+Example
+div > p {
+  background-color: yellow;
+}
+</pre>
+
+      /*******************************************************/
+
+      <h2>Adjacent Sibling Selector (+) </h2>
+
+      The adjacent sibling selector is used to select an element that is directly after another specific element.
+
+      Sibling elements must have the same parent element, and "adjacent" means "immediately following".
+
+      The following example selects the first <p> element that are placed immediately after
+      <div> elements:
+        <pre>
+Example
+div + p {
+  background-color: yellow;
+}
+</pre>
+
+        /*******************************************************/
+
+        <h2>General Sibling Selector (~)</h2>
+        The general sibling selector selects all elements that are next siblings of a specified element.
+
+        The following example selects all <p> elements that are next siblings of
+        <div> elements:
+          <pre>
+Example
+div ~ p {
+  background-color: yellow;
+}
+</pre>
+
+          /*******************************************************/

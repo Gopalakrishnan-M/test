@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Menu</title>
+
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!--<link href="css/style.css" rel="stylesheet"> -->
+
+    <style>
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            //font-family: "Montserrat", sans-serif;
+            font-family: "Tomoto", sans-serif;
+            //font-weight: 400;
+            margin: 0 0 20px 0;
+            padding: 0;
+        }
+
+        label {
+            margin: 3px;
+            padding: 3px;
+        }
+
+        button {
+            //color: white;
+            //padding: 2px;
+            //font-family: Arial;
+            //border: 1px solid powderblue;
+            margin: 50px;
+            padding: 10px;
+        }
+
+    </style>
+
+    <script>
+        function validateForm() {
+            var uid = document.loginForm.txtUserId.value;
+            var upass = document.loginForm.txtPassword.value;
+
+            if (uid == 1 && upass == "vip") {
+                //alert("Success");
+                //document.getElementById("loginstatus").innerHTML = "<h2>S U C C E S S</h2>";
+                document.getElementById("loginstatus").innerHTML = "<h2>S U C C E S S</h2>";
+
+                //localStorage.clear();
+
+
+
+                setTimeout(function(){
+                    window.close();
+                    window.open('menu.html');
+                },1000); 
+
+              
+            }
+            else {
+                document.getElementById("loginstatus").innerHTML = "<h2>S O R R Y</h2>";
+
+                setTimeout(   () => {
+                    window.close();
+                    window.open('login.html');
+                },2000); 
+                
+            }
+            
+        }
+       function ResetForm(){
+        document.getElementById("loginstatus").innerHTML = "<h2>R E S E T</h2>";
+
+        setTimeout( () => {
+        window.close();
+        window.open('login.html');
+        },1000); 
+       
+       }
+
+
+    </script>
+
+
+
+
+</head>
+
+<!-- <body bgcolor="#8dc639"> -->
+<body style="background-color:grey;">
+    <!--
+    <section id="call-to-action" class="wow fadeInUp">
+    -->
+
+    <div class="container">
+        <div class="jumbotron text-center" style="height : 40px ; padding : 5px; margin : 5px;">
+            <!--<h1>Pasuparthy Supermarket</h1> -->
+            <h2>V I P &nbsp;&nbsp;&nbsp L o g i n </h2>
+        </div>
+    </div>
+
+    <!-- <form name="loginForm" method="post" action="" > 
+    
+    <!-- <form name="loginForm" method="post" action="" autocomplete="off" onsubmit="validateForm()"> --> 
+    <!-- <form name="loginForm"  action="" autocomplete="off" onsubmit="validateForm()"> --> 
+    <form name="loginForm" autocomplete="off">  
+
+        <div class="container" id="containerclass">
+            <div class="row">
+                <div class="col-md-9 form-group-lg ">
+                    <div class="row">
+                        <div class="col-md-4 form-group-lg ">
+                            <label>U s e r   id</label>
+                            <input type="number" class="form-control" name="txtUserId">
+                        </div>
+                    </div>
+                    <div class='row'>
+                        <div class="col-md-4 form-group-lg ">
+                            <label>P a s s w o r d</label>
+                            <input type="password" style="text-transform:uppercase" class="form-control" name="txtPassword">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-md-3 form-group-lg ">
+                    <h5><i>Supported by</i> </h5>
+                    <h5><b>V I P School</b></h5>
+                    <ul>
+                        <li><h6>Enquiry :     : 95003 35479</h6></li>
+                        <li><h6></h6></li>
+                        <li><h6></h6></li>
+                        <li><h6></h6></li>
+                        <li><h6>SERVICE : 87781 54990</h6></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                   <input type="button" class="btn btn-primary btn-lg btn-block login-button" value="Sign in" onclick="validateForm()">  
+                   <!--<input type="submit" class="btn btn-primary btn-lg btn-block login-button" value="Sign in" > -->
+                </div>
+                <div class="col-sm-6">
+                </div>
+
+
+                <div class="col-sm-3">
+                    <input type="button" class="btn btn-primary btn-lg btn-block login-button" value="Reset" onclick="ResetForm()">
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <!--<div class="jumbotron text-center alert alert-success" id="loginstatus" style="height : 40px ; padding : 0px; margin : 0px; display: none;"> -->
+            <div class="jumbotron text-center alert alert-success" id="loginstatus" style="height : 40px ; padding : 5px; margin : 5px; ">
+            </div>
+
+        </div>
+    </form>
+
+
+    <!-- </section>  -->
+
+</body>
+</html>
