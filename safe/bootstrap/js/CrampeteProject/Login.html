@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login Form</title>
+</head>
+
+<body bgcolor="grey">
+
+
+    <h1 align="center">CRAMPETE</h1>
+    <h1 align="center">L o g i n</h1>
+
+    <BR>
+    <form name="loginForm" method="post">
+
+        <h2 align="center">U s e r id</h2>
+        <p align="center">
+            <input type="text" name="txtUserId">
+        </p>
+
+        <br>
+
+        <h2 align="center">P a s s w o r d</h2>
+        <p align="center">
+            <input type="password" name="txtPassword">
+        </p>
+
+        <br>
+
+        <p align="center">
+            <input type="submit" value="Log in">
+        </p>
+
+        <br>
+        <br>
+        <p align="center">
+            <input type="reset" value="Reset">
+        </p>
+
+    </form>
+
+
+    <br>
+
+    <hr>
+    <h2>D o u b t s</h2>
+    <hr>
+
+    <h3> Is there any technical difference between Reset & Refresh the Browser </h3>
+    <br>
+    <h3> Where enctype="text/plain" is used ? </h3>
+
+
+    <hr>
+    <h2>For our Reference</h2>
+    <hr>
+
+    <h3>
+        Attributes of Form:
+        <ul type="disc">
+            <li>action
+                <ul type="square">
+                    <li>The action attribute defines the action to be performed when the form is submitted.</li>
+                    <li>If the action attribute is omitted, the action is set to the current page.</li>
+                </ul>
+            </li>
+            <br>
+
+            <li>method
+                <ul type="square">
+                    <li>The method attribute specifies the HTTP method to be used when submitting the form data.</li>
+
+                    <li>The form-data can be sent as URL variables (with method="get") or as HTTP post transaction (with
+                        method="post").</li>
+
+                    <li><em><strong>The default HTTP method when submitting form data is GET.</strong></em>
+
+                        <br>
+                        <ul type="circle">
+
+                            <li>method="GET" </li>
+                            <br>
+                            <li>Appends the form data to the URL, in name/value pairs </li>
+
+                            <li><u>NEVER use GET to send sensitive data! (the submitted form data is visible in the
+                                    URL!)</u>
+                            </li>
+
+                            <li>The length of a URL is limited (2048 characters)</li>
+
+                            <li>Useful for form submissions where a user wants to bookmark the result</li>
+                            <li>GET is good for non-secure data, like query strings in Google</li>
+
+                            <br>
+                            <li>method="POST"</li>
+                            <br>
+                            <li>Appends the form data inside the body of the HTTP request (the submitted form data is
+                                not shown in the URL)</li>
+                            <li>POST has no size limitations, and can be used to send large amounts of data.</li>
+                            <li>Form submissions with POST cannot be bookmarked</li>
+                            <li>Always use POST if the form data contains sensitive or personal information!</li>
+                        </ul>
+                </ul>
+            </li>
+            <br>
+
+
+            <li>target
+                <ul type="square">
+                    <li>The target attribute specifies where to display the response that is received after submitting
+                        the form.
+                        <br>
+                        <ul type="circle">
+                            <li>_blank The response is displayed in a new window or tab</li>
+                            <li>_self The response is displayed in the current window</li>
+                            <li>_parent The response is displayed in the parent frame</li>
+                            <li>_top The response is displayed in the full body of the window</li>
+                            <li>framename The response is displayed in a named iframe</li>
+                        </ul>
+                    </li>
+            </li>
+            <br>
+            <li><em>The default value is _self which means that the response will open in the current window.</em></li>
+            </li>
+        </ul>
+
+        </li>
+        <br>
+        <li>autocomplete
+            <ul type="square">
+                <li>The autocomplete attribute specifies whether a form should have autocomplete on or off.</li>
+                <li>When autocomplete is on, the browser automatically complete values based on values that the user
+                    has entered before.</li>
+            </ul>
+        </li>
+
+        <li>enctype
+            <ul type="square">
+                <li>enctype=<u>"application/x-www-form-urlencoded"</u> ... This the Default enctype</li>
+                <br>
+                <li>enctype=<u>"multipart/form-data"</u> ----- to upload binary data like files,images etc --- method="POST" is must</li>
+                <br>
+                <li>enctype=<u>"text/plain"</u></li>
+            </ul>
+        </li>
+
+        <br>
+
+
+
+        <li>novalidate
+            <ul type="square">
+                <li>The novalidate attribute is a boolean attribute.</li>
+
+                <li>When present, it specifies that the form-data (input) should not be validated when submitted.
+                </li>
+            </ul>
+        </li>
+
+    </h3>
+
+</body>
+
+</html>

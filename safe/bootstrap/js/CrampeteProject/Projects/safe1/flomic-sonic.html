@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        flonic-sonic
+    </title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        }
+
+        .clearfix {
+            clear: both;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        p {
+            padding: 0;
+            margin: 0;
+        }
+
+        /*
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+*/
+
+        body {
+            margin: 0;
+        }
+
+        .outerdiv {
+            background-color: black;
+            width: 100%;
+
+            margin: 0 3% 0 3%;
+
+
+
+            margin-top:0;
+            margin-right: 3%;
+            margin-bottom: 0%;
+            margin-left: 3%;
+            /*margin-bottom: 2;*/
+            /*
+            margin-top: 2%;
+            margin-bottom: 2%;*/
+        }
+
+        .menubar {
+            width: 22%;
+            /*18%;*/
+            position: fixed;
+            height: 100vh;
+            background-color: rgb(100, 98, 98);
+            /*top:0;*/
+            margin-left: 3%;
+            margin-top: 0;
+            /*top: 2%;*/
+        }
+
+        .logo {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            height: 80px;
+            background-color: white;
+            /*display: grid;
+            grid-template-columns: 50% 50%;*/
+
+        }
+
+        .logo .logisticimage {
+
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6gbLIFXGEH4Fx2fXUSCWBqBExN2dKT8h1jEkYqpm4LQLYijFS&usqp=CAU);
+            background-repeat: no-repeat;
+            /*background-position: center center;*/
+            /*background-color: white;*/
+            padding: 2px;
+        }
+
+        .logo .logistictext {
+            margin: 0;
+            /*padding:1px;*/
+            /*background-color: white;*/
+            padding: 0 0 0 130px;
+        }
+
+        .logistictext h2 {
+
+            margin: 10px 0 0 0;
+
+            padding: 1px;
+
+        }
+
+        .logistictext p {
+            margin: 0;
+            padding: 1px;
+            font-size: 10px;
+
+        }
+
+
+        .menuitems {
+            margin-top: 20px;
+            text-align: center;
+            background-color: rgb(53, 50, 50);
+
+        }
+
+        .menubar .menuitems a {
+
+            display: block;
+            padding: 8px 4px 8px 4px;
+
+            text-decoration: none;
+            color: white;
+            font-size: 15px;
+        }
+
+        a:hover {
+            background-color: rgb(187, 187, 8);
+        }
+
+
+
+
+
+
+
+        .container {
+            width: 72%;
+            /*top: 2%;*/
+            margin-left: 25%;
+            margin-right: 3%;
+            /* 18%;  + 3%*/
+            /*margin-right: 2%;*/
+            background-color: white;
+            margin-top: 0;
+        }
+
+
+
+        .mainphoto {
+            top: 0;
+            /*display: grid;*/
+            height: 400px;
+            /*background-color: yellow;*/
+            background-image: url(https://images.pexels.com/photos/259620/pexels-photo-259620.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);
+
+
+            /*z-index: 2;*/
+        }
+
+        .mainphoto .mainphoto-text {
+            text-align: center;
+            font-weight: bold;
+            font-size: 28px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: rgb(245, 238, 245);
+
+            margin-top: 100px;
+            margin-bottom: 0;
+            /*z-index: 1;*/
+        }
+
+        .mainphoto p {
+            padding: 0;
+            /*margin-top: 5px;*/
+            text-align: center;
+            font-size: 14px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: thistle;
+            /*padding-top: 100px;*/
+            /*z-index: 1;*/
+
+        }
+
+        .backgroundcolor {
+            margin: 4%;
+            background-color: whitesmoke;
+        }
+
+        .welcome {
+
+            height: 60px;
+            text-align: center;
+            color: blue;
+            margin-top: 30px;
+
+        }
+
+        .welcome p {
+            margin-top: 10px;
+            font-size: 8px;
+        }
+
+        /*
+        .team {
+
+            height: 60px;
+            text-align: left;
+            color: brown;
+            margin-top: 30px;
+
+        }
+
+        .team p {
+            margin-top: 10px;
+            font-size: 15px;
+        }
+*/
+        /***********************************************************/
+
+
+
+        .aboutusbutton {
+            margin-top: 30px;
+            height: 40px;
+            width: 120px;
+            background-color: rgb(155, 85, 5);
+            text-align: center;
+            color: blue;
+            padding: 10px;
+
+        }
+
+        .aboutus {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-column-gap: 20px;
+            height: 200px;
+            margin-top: 40px;
+            margin-bottom: 0;
+        }
+
+        .aboutus .aboutus-col1 {
+
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbFTpBGplre7-kGNAVEx8uWNpTocn_3yJ5og&usqp=CAU);
+            background-position: top center;
+            margin-bottom: 0;
+            background-repeat: no-repeat;
+
+        }
+
+        .aboutus .aboutus-col2 {
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSObZtcGzvT4BWK2gAmc0mOJeeyWIrzLis5kQ&usqp=CAU);
+            background-position: top center;
+            background-repeat: no-repeat;
+
+        }
+
+        .aboutus .aboutus-col3 {
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHcTggIfAjrvxItI8dnYtnyacmONER9kt-mQ&usqp=CAU);
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHgZNULhaCRjuCYCLJceoI5eJJF90ZueAyHQ&usqp=CAU);
+            background-position: top center;
+            background-repeat: no-repeat;
+        }
+
+
+        .aboutus-col-text1 {
+            text-align: center;
+            font-size: 14px;
+            /* margin-top: 0 ;*/
+            margin-top: 0;
+            height: 20px;
+            color: brown;
+        }
+
+        .aboutus-col-text2 {
+            text-align: center;
+            font-size: 12px;
+            margin-top: 0;
+            height: 20px;
+            color: brown;
+        }
+
+
+
+        .team {
+            display: grid;
+            grid-template-columns: 60% 38%;
+            grid-template-rows: 270px;
+            grid-column-gap: 2%;
+
+
+            /*height: 270px;*/
+            margin-top: 30px;
+            margin-bottom: 0;
+        }
+
+        .team h3 {
+            margin-top: 0px;
+            color: brown;
+        }
+
+        .team p {
+            margin-top: 10px;
+            font-size: 15px;
+            color: blue;
+        }
+
+
+        .team .col2 {
+
+
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyjpOPKk0IF-zwBt7olAaUvRXdZR61vGflZw&usqp=CAU);
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+
+        /************************************************************/
+
+        .servicesbutton {
+            margin-top: 30px;
+            height: 40px;
+            width: 120px;
+            background-color: rgb(155, 26, 230);
+
+            text-align: center;
+            color: blue;
+            padding: 10px;
+
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: 32% 32% 32%;
+            grid-template-rows: 80px;
+            grid-column-gap: 2%;
+
+
+            /*height: 270px;*/
+            margin-top: 30px;
+            margin-bottom: 0;
+
+        }
+
+        .servicesbox1,
+        .servicesbox2,
+        .servicesbox3 {
+            color: wheat;
+            background-color: rgb(155, 26, 230);
+            text-align: center;
+            padding: 5% 5% 5% 20%;
+
+        }
+
+        .skills {
+            display: grid;
+            grid-template-columns: 60% 38%;
+            grid-template-rows: 270px;
+            grid-column-gap: 2%;
+
+
+            margin-top: 30px;
+            margin-bottom: 0;
+        }
+
+        .skills h3 {
+            margin-top: 0px;
+            color: brown;
+        }
+
+        .skills p {
+            margin-top: 10px;
+            font-size: 15px;
+            color: blue;
+        }
+
+
+        .skills .col2 {
+
+
+
+
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 50px 50px 50px 50px;
+            grid-row-gap: 10px;
+
+
+            margin-top: 30px;
+            margin-bottom: 0;
+
+        }
+
+        .skills .col2 .line1 {
+            height: 20px;
+            width: 90%;
+            color: crimson;
+            background-color: lightblue;
+        }
+
+        .skills .col2 .line2 {
+            height: 20px;
+            width: 75%;
+            color: crimson;
+            background-color: lightblue;
+        }
+
+        .skills .col2 .line3 {
+            height: 20px;
+            width: 66%;
+            color: crimson;
+            background-color: lightblue;
+        }
+
+
+        .skills .col2 .line4 {
+            height: 20px;
+            width: 88%;
+            color: crimson;
+            background-color: lightblue;
+        }
+
+
+        /********************************************************/
+
+
+        .portfoliobutton {
+            margin-top: 30px;
+            height: 40px;
+            width: 120px;
+            background-color: rgb(78, 204, 177);
+            text-align: center;
+            color: blue;
+            padding: 10px;
+            margin-bottom: 40px;
+
+        }
+
+        .portfolio {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            /*grid-template-rows: 200px 0px 200px 0px;*/
+            grid-template-rows: 200px 200px;
+
+            /*grid-row-gap: 5px;*/
+            grid-column-gap: 20px;
+            bottom: 0;
+            margin: 0;
+        }
+
+
+
+
+        .portfolio .portfolio-col1 {
+
+
+
+            background-image: url(https://techcrunch.com/wp-content/uploads/2019/07/Twitter-Web-Light2.png?w=730&crop=1);
+
+            background-image: url(https://images.unsplash.com/photo-1609921212029-bb5a28e60960?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTQ3fHx3ZWIlMjBkZXNpZ258ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60);
+
+        }
+
+        .portfolio .portfolio-col2 {
+            background-image: url(https://images.unsplash.com/3/doctype-hi-res.jpg?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTQwfHx3ZWIlMjBkZXNpZ258ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60);
+            /*background-position: top center;*/
+        }
+
+        .portfolio .portfolio-col3 {
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHcTggIfAjrvxItI8dnYtnyacmONER9kt-mQ&usqp=CAU);
+
+            background-image: url(https://buffer.com/library/content/images/size/w1000/library/wp-content/uploads/2014/05/free-images-burst.png);
+            background-image: url(https://images.unsplash.com/photo-1519074002996-a69e7ac46a42?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTcwfHx3ZWIlMjBkZXNpZ258ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60);
+            background-image: url(https://images.unsplash.com/photo-1526378787940-576a539ba69d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTk5fHx3ZWIlMjBkZXNpZ258ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60);
+            background-image: url(https://images.unsplash.com/photo-1505373877841-8d25f7d46678?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjM0fHx3ZWIlMjBkZXNpZ258ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60);
+            background-position: center center;
+        }
+
+
+        .portfolio .portfolio-col4 {
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHcTggIfAjrvxItI8dnYtnyacmONER9kt-mQ&usqp=CAU);
+
+            background-image: url(https://buffer.com/library/content/images/size/w1000/library/wp-content/uploads/2014/05/free-images-burst.png);
+            background-image: url(https://images.unsplash.com/photo-1519074002996-a69e7ac46a42?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTcwfHx3ZWIlMjBkZXNpZ258ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60);
+            background-image: url(https://images.unsplash.com/photo-1526378787940-576a539ba69d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTk5fHx3ZWIlMjBkZXNpZ258ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60);
+            background-position: center center;
+        }
+
+        .portfolio .portfolio-col5 {
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHcTggIfAjrvxItI8dnYtnyacmONER9kt-mQ&usqp=CAU);
+
+            background-image: url(https://buffer.com/library/content/images/size/w1000/library/wp-content/uploads/2014/05/free-images-burst.png);
+            background-image: url(https://images.unsplash.com/photo-1519074002996-a69e7ac46a42?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTcwfHx3ZWIlMjBkZXNpZ258ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60);
+            background-position: center center;
+        }
+
+        .portfolio .portfolio-col6 {
+
+            background-image: url(https://media.istockphoto.com/photos/businesswoman-typing-on-a-laptop-keyboard-she-is-preparing-a-summary-picture-id1336321206?k=20&m=1336321206&s=612x612&w=0&h=WHTLNeMguopvdpqFoNAY1fjWi1UPywWSQF72n8U8MYo=);
+            background-position: center center;
+        }
+
+
+
+        .portfolio-col-text1 {
+            text-align: center;
+            font-size: 14px;
+            /* margin-top: 0 ;*/
+            top: 0;
+            margin: 0;
+            color: brown;
+        }
+
+        .portfolio-col-text2 {
+            text-align: center;
+            font-size: 12px;
+            margin-top: 0;
+            margin: 0;
+            color: brown;
+        }
+
+
+
+
+
+        .contactusbutton {
+            margin-top: 30px;
+            height: 40px;
+            width: 120px;
+            background-color: rgb(197, 18, 48);
+            text-align: center;
+            color: blue;
+            padding: 10px;
+            margin-bottom: 40px;
+        }
+
+
+
+        .socialicons {
+            height: 60px;
+            background-color: rgb(87, 85, 85);
+        }
+
+        .copyright {
+            height: 40px;
+            background-color: rgb(36, 33, 33);
+            padding: 10px 10px 10px 50px;
+            color: lightgrey
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="outerdiv">
+
+        <div class="menubar">
+
+            <div class="logo">
+                <div class="logisticimage">
+
+                </div>
+                <div class="logistictext">
+                    <h2><em>FLOMIC</em></h2>
+                    <p><strong>LOGISTICS PVT LTD</strong></p>
+                </div>
+            </div>
+
+            <div class="menuitems">
+                <a href="">HOME</a>
+                <a href="">ABOUT&nbsp;US</a>
+                <a href="">SERVICES</a>
+                <a href="">PORTFOLIO</a>
+                <a href="">CONTACT&nbsp;US</a>
+            </div>
+            <div></div>
+        </div>
+
+
+
+
+
+        <div class="container">
+            <div class="backgroundcolor">
+
+                <div class="mainphoto">
+                    <div class="mainphoto-text">RESPONSIVE LAYOUT</div>
+                    <p>PELLENTESQUE HABITANT MORBI TRISTIQUE SENECYUS ET</p>
+                    <p>NETUS ET MALESUADA FAMES</p>
+                </div>
+                <div class="welcome">
+                    WELCOME TO TEMPLATE
+                    <P>Malcenas adipiscing pelentesque elit eu volutpat integer vitae pubvinar magna lorem ipsum dolor
+                        sit amet, consecteur adipiscing elit.</P>
+                    <p>Praesent autor ml metus, nec sagittis purus ultrices id.</p>
+
+
+                </div>
+
+
+
+
+                <!----------------------------------------------------------------->
+
+                <button class="aboutusbutton">ABOUT US</button>
+
+
+                <div class="aboutus">
+                    <div class="aboutus-col1">
+                    </div>
+
+                    <div class="aboutus-col2">
+
+                    </div>
+                    <div class="aboutus-col3">
+
+                    </div>
+                </div>
+
+                <div class="aboutus">
+                    <div class="aboutus-col-text1">
+                        <p>CHRISTINA WELLDONE</p>
+                        <p>Marketing Director</p>
+                    </div>
+                    <div class="aboutus-col-text1">
+                        <p>TERI BELLE</p>
+                        <p>Creative EXecutive</p>
+                    </div>
+                    <div class="aboutus-col-text1">
+                        <p>TAWANA CHERRY</p>
+                        <p>Company President</p>
+                    </div>
+                </div>
+
+
+
+
+                <!----------------------------------------------------------------->
+
+                <div class="team">
+                    <div class="col1">
+                        <h3>OUR MANAGEMENT TEAM</h3>
+
+                        <p>“Before seamless, it was really hard to find the right information and talk to the people
+                            that we wanted to talk to without permission from somebody else.
+                            So getting permission is one thing, then they give you their contact, but we wanted to talk
+                            to a lot of people without getting permission first and without Seamless, that was really
+                            hard.”
+                            Results:</p>
+                        <p>“The benefit [of Seamless] was getting to the right people at bigger deals.
+                            So the first few deals were smaller.
+                            And so now we’re approaching bigger deals.
+                            So the sales cycle didn’t shorten, but it did allow us to go for much bigger deals, which
+                            wasn’t possible before.”
+                        </p>
+
+                    </div>
+                    <div class="col2">
+
+                    </div>
+                </div>
+
+
+                <!----------------------------------------------------------------->
+
+                <hr>
+                <div><button class="servicesbutton">SERVICES</button></div>
+
+
+                <div class="services">
+
+                    <div class="servicesbox1">
+                        <p>The best</p>
+                        <p>Support Ever</p>
+                    </div>
+
+                    <div class="servicesbox2">
+                        <p>Fully</p>
+                        <p>Responsive Design</p>
+                    </div>
+
+                    <div class="servicesbox3">
+                        <p>Unlimited</p>
+                        <p>Layouts Design</p>
+                    </div>
+                </div>
+
+                <!----------------->
+
+
+                <div class="skills">
+                    <div class="col1">
+                        <h3>OUR SKILLS</h3>
+
+                        <p>A custom Web Development is a well planned way to deal with web upgrade whereby customization
+                            is being actualized as far as structure utilized.</p>
+                        <p>A website is a public application that usually targets any number of users. Websites built
+                            completely from the ground up. If you’re building a website make sure you get something that
+                            is unique and usable.
+                        </p>
+                        <P>This technique is fully supported in modern browsers which makes web pages render well on a
+                            variety of devices and window or screen sizes</P>
+
+                    </div>
+                    <div class="col2">
+                        <div class="line1">GRAPHICS 90%</div>
+                        <div class="line2">HTML5 CSS3 75%</div>
+                        <div class="line3">WORDPRESS 66%</div>
+                        <div class="line4">MARKETING 88%</div>
+
+                    </div>
+                </div>
+
+
+
+
+
+                <!----------------------------------------------------------------->
+                <hr>
+                <div><button class="portfoliobutton">PORTFOLIO</button></div>
+
+
+
+
+
+
+                <div class="portfolio">
+                    <div class="portfolio-col1">
+
+                    </div>
+
+                    <div class="portfolio-col2">
+
+                    </div>
+                    <div class="portfolio-col3">
+
+                    </div>
+                </div>
+
+
+                <!--
+                <div class="portfolio">
+                    <div class="portfolio-col-text1">
+                        FANTASY
+                    </div>
+                    <div class="portfolio-col-text1">
+                        BOTANY
+                    </div>
+                    <div class="portfolio-col-text1">
+                        UNIVERSE
+                    </div>
+                </div>
+                -->
+
+
+
+                <div class="portfolio">
+                    <div class="portfolio-col4">
+                    </div>
+
+                    <div class="portfolio-col5">
+
+                    </div>
+                    <div class="portfolio-col6">
+
+                    </div>
+                </div>
+
+                <div class="portfolio">
+                    <div class="portfolio-col-text1">
+                        CHANNEL
+                    </div>
+                    <div class="portfolio-col-text1">
+                        DRAGONFLY
+                    </div>
+                    <div class="portfolio-col-text1">
+                        TITANIUM
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div><button class="contactusbutton">CONTACT US</button></div>
+
+
+
+                <div class="socialicons">
+
+                    <img src="764909_facebook_media_social_square_icon.png" width="20px">
+                    <!--
+                    <img src="https://www.pngkit.com/png/full/0-7275_social-media-icons-set-network-background-white-social.png">
+                    <img src="https://cdn1.iconfinder.com/data/icons/capsocial/500/facebook-256.png">
+
+<img src="https://as1.ftcdn.net/v2/jpg/02/94/40/98/1000_F_294409855_UYav8fSkNbqIntejG1pyWCR4cajrsfVD.jpg">
+                    <img src="https://t3.ftcdn.net/jpg/02/94/40/98/240_F_294409855_UYav8fSkNbqIntejG1pyWCR4cajrsfVD.jpg">
+                   <img src=https://t3.ftcdn.net/jpg/02/94/40/98/240_F_294409855_UYav8fSkNbqIntejG1pyWCR4cajrsfVD.jpg">
+                   <img src=https://t3.ftcdn.net/jpg/02/94/40/98/240_F_294409855_UYav8fSkNbqIntejG1pyWCR4cajrsfVD.jpg">
+                    <img src=https://t3.ftcdn.net/jpg/02/94/40/98/240_F_294409855_UYav8fSkNbqIntejG1pyWCR4cajrsfVD.jpg">
+-->
+                </div>
+                <div class="copyright">
+                    Copyright @ 2015 Flomic
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,438 @@
+<html>
+
+<head>
+    <title>Furniture Show Room</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+
+    .outerdiv {
+        background-color: white;
+        width: 100%;
+        height: 1500px;
+        margin-left: 10%;
+        margin-right: 10%;
+
+        border-style: solid;
+        border-width: 50px 120px;
+        border-color: rgb(59, 61, 59);
+
+        margin: 20px;
+
+    }
+
+
+
+  
+
+
+
+
+
+    .menu div,
+    .menu a {
+        display: inline-block;
+        padding: 40px 20px 40px 20px;
+        /*background-color: yellow;*/
+
+        width: 15%;
+
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    a:hover {
+        background-color: rgb(187, 187, 8);
+    }
+
+    .menu {
+        text-align: center;
+    }
+
+
+    .ispace {
+        height: 30px;
+
+        font-size: 40px;
+
+       
+        /*xx-large;*/
+        /*text-align: center;*/
+
+
+        text-align: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    }
+
+    .ispace span {
+        color: rgb(187, 187, 8);
+    }
+
+    .ispace h1 {
+        text-align: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+        width=100%;
+        margin-top: 0px;
+
+    }
+
+    h2,
+    h3 {
+        text-align: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin-top: 0px;
+        margin-bottom: 0;
+
+    }
+
+
+    .mainphoto {
+        width: 90%;
+        height: 250px;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 100px;
+      
+        background-image: url(https://5.imimg.com/data5/SELLER/Default/2021/7/UO/OU/MQ/117638671/a59cbeb2-94a8-436e-8f86-3b8ccabf6afd-500x500.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+
+    .radiobuttons {
+        margin-top: 15px;
+        /*size:20px;*/
+        text-align: center;
+    }
+
+    input[type="radio"] {
+        font-size: 50px;
+        ;
+    }
+
+
+
+    .row2-column1,
+    .row2-column2,
+    .row2-column3 {
+        /*background-color: green;*/
+
+        width: 25%;
+        height: 250px;
+        float: left;
+        margin-left: 5%;
+        margin-top: 40px;
+
+
+
+    }
+
+    .row2-column2 {
+        margin-left: 8%;
+    }
+
+    .row2-column3 {
+        margin-left: 8%;
+    }
+
+
+    .row2-column1-upper,
+    .row2-column2-upper,
+    .row2-column3-upper {
+        background-color: rgb(187, 187, 8);
+        color: wheat;
+        height: 20%;
+        text-align: center;
+        padding: 5px;
+    }
+
+    .row2-column1-middle {
+        height: 40%;
+        background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCbnqz73pu94D0Xha_PE7D8b8f0jES44mdfA&usqp=CAU);
+
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .row2-column2-middle {
+        height: 40%;
+
+        background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1a2B7qvewXytmyYrDGHV7_Q_GTEuze0ExPg&usqp=CAU);
+        background-size: cover;
+        background-position: center center;
+
+    }
+
+    .row2-column3-middle {
+        height: 40%;
+        background-image: url(https://stylesatlife.com/wp-content/uploads/2020/01/Three-Seater-Orange-Sofa.jpg);
+
+        background-size: cover;
+        background-position: center center;
+
+    }
+
+    .row2-column1-lower {
+        color:wheat;
+        background-color: rgb(51, 51, 51);
+
+    }
+
+    .row2-column2-lower {
+        color:wheat;
+        background-color: rgb(38, 38, 38);
+
+
+    }
+
+    .row2-column3-lower {
+
+        color:wheat;
+
+        background-color: rgb(26, 26, 26);
+
+
+
+
+    }
+
+    /*
+    .row2-column1-lower, .row2-column2-lower,.row2-column3-lower {
+        height: 40%;
+    }
+*/
+
+    /******************P R I C E******S T A R T****************/
+
+
+
+    .div1,
+    .div2,
+    .div3 {
+        /*background-color: green;*/
+        color: blueviolet;
+        width: 30%;
+        height: 305px;
+        float: left;
+        margin-left: 3%;
+        margin-top: 40px;
+    }
+
+    .div2 button,
+    .div3 button {
+        background-color: grey;
+    }
+
+    /***************************************************************************/
+
+    .price1-left,
+    .price2-left {
+        background-color: orange;
+        width: 10%;
+        height: 150px;
+        float: left;
+
+        margin-left: 5%;
+        margin-top: 40px;
+
+        padding-top: 30px;
+        padding-bottom: 0px;
+        font-size: 40px;
+    }
+
+
+    .price1-right,
+    .price2-right {
+        background-color: lightslategrey;
+        width: 33%;
+        height: 150px;
+        float: left;
+        /*margin-left: 5%;*/
+        margin-top: 40px;
+        margin-bottom: 40px;
+
+        padding-top: 10px;
+
+
+    }
+
+    .price1-right p,
+    .price2-right p {
+        text-align: justify;
+        padding: 10px;
+    }
+
+    /****************** P R I C E ****** E N D T****************/
+</style>
+
+<body>
+    <div class="outerdiv">
+
+
+        <nav>
+
+            <div class="menu">
+                <!--
+                <div>HOME</div>
+                <div>ABOUT US</div>
+                <div>PRODUCTS</div>
+                <div>SERVICES</div>
+                <div>CONTACT</div>
+                -->
+
+
+
+                <a href="">HOME</a>
+                <a href="">ABOUT&nbsp;US</a>
+                <a href="">PRODUCTS</a>
+                <a href="">SERVICES</a>
+                <a href="">CONTACT</a>
+            </div>
+        </nav>
+
+
+        <!--*************************************************************-->
+        <div class="ispace">
+            <h1><span>I</span>space</h1>
+        </div>
+
+        <!--*************************************************************-->
+
+
+        <!--*************************************************************-->
+
+
+        <div class="mainphoto">
+
+
+        </div>
+
+        <!--*************************************************************-->
+
+        <div class="radiobuttons">
+            <input type="radio">
+            <input type="radio">
+            <input type="radio" checked>
+            <input type="radio">
+
+        </div>
+
+        <!--*************************************************************-->
+
+
+        <div class="row2-column1">
+            <div class="row2-column1-upper">
+                <h2>LOREM IPSUM IS</h2>
+            </div>
+            <div class="row2-column1-middle"></div>
+            <div class="row2-column1-lower">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit. Sit consequatur voluptates</p>
+            </div>
+        </div>
+
+
+        <div class="row2-column2">
+            <div class="row2-column2-upper">
+                <h2>LOREM IPSUM IS</h2>
+            </div>
+            <div class="row2-column2-middle"></div>
+            <div class="row2-column2-lower">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit. Sit consequatur voluptates</p>
+            </div>
+        </div>
+
+        <div class="row2-column3">
+            <div class="row2-column3-upper">
+                <h2>LOREM IPSUM IS</h2>
+            </div>
+            <div class="row2-column3-middle"></div>
+            <div class="row2-column3-lower">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit. Sit consequatur voluptates</p>
+            </div>
+        </div>
+
+        <!--*************************************************************-->
+
+
+        <!--*************************************************************-->
+
+        <div class="div1">
+            <h3>Lorem Ipsum Simply</h3>
+            <p>> Lorem ipsum dolor sit amet </p>
+            <p>> Lorem ipsum dolor sit amet </p>
+            <p>> Lorem ipsum dolor sit amet </p>
+            <p>> Lorem ipsum dolor sit amet </p>
+            <p>> Lorem ipsum dolor sit amet </p>
+        </div>
+        <div class="div2">
+            <h3>Lorem Ipsum Simply</h3>
+            <h4>The Standard Chunk of Lorem</h4>
+            <h4>Ipsum Dolor Sit Anet</h4>
+            <p>There are many variations of passages of lorem
+                Ipsum available, but the majority have suffered
+                alteration in some form, by injected humour, or
+                randomised words which don't lock even slightly
+                believable. If you are going to use passage</p>
+            <button>Read More</button>
+        </div>
+
+        <div class="div3">
+            <h3>Lorem Ipsum Simply</h3>
+            <h4>The Standard Chunk of Lorem</h4>
+            <h4>Ipsum Dolor Sit Anet</h4>
+            <p>There are many variations of passages of lorem
+                Ipsum available, but the majority have suffered
+                alteration in some form, by injected humour, or
+                randomised words which don't lock even slightly
+                believable. If you are going to use passage</p>
+            <button>Read More</button>
+        </div>
+
+        <!--*************************************************************-->
+
+        <div class="price1-left">
+            <h2>15</h2>
+        </div>
+
+        <div class="price1-right">
+            <h3>LOREM IPSUM IS SIMPLY TEXT</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Sit consequatur voluptates</p>
+
+        </div>
+        <div class="price2-left">
+            <h2>$</h2>
+
+
+
+        </div>
+        <div class="price2-right">
+            <h3>LOREM IPSUM IS SIMPLY TEXT</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Sit consequatur voluptates</p>
+
+        </div>
+
+        <!--*************************************************************-->
+
+
+        <h3>DESIGN BY </h3>
+        <h3>Gopalakrishnan M </h3>
+
+
+    </div>
+
+</body>
+
+</html>
